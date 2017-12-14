@@ -5,11 +5,17 @@ set autoindent
 set smartindent
 set cindent
 set shiftwidth=4
+set encoding=utf-8
 
 noremap ş l
 noremap l k
 noremap k j
 noremap j h
+
+noremap Ş L
+noremap L K
+noremap K J
+noremap J H
 
 noremap <C-W>ş <C-W>l
 noremap <C-W>l <C-W>k
@@ -66,6 +72,7 @@ set statusline+=%*
 set laststatus=2
 "let g:powerline_pycmd='py3'
 let g:airline_theme='dark'
+let g:airline_powerline_fonts = 1
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -89,3 +96,19 @@ let g:AutoPairs = {'(':')', '[':']', '{':'}',"'":"'",'"':'"', '`':'`', '<':'>'}
 
 nmap <F8> :TagbarToggle<CR>
 
+set cursorline
+hi CursorLine term=NONE cterm=NONE ctermbg=darkgray ctermfg=NONE
+hi CursorLineNR term=NONE cterm=NONE ctermbg=darkgray ctermfg=NONE
+
+set whichwrap+=<,>,h,l,[,]
+
+let &t_SI = "\<Esc>[6 q"
+let &t_SR = "\<Esc>[4 q"
+let &t_EI = "\<Esc>[2 q"
+
+set mouse=a
+let g:NERDTreeMouseMode=3
+map <MiddleMouse> <Nop>
+imap <MiddleMouse> <Nop>
+
+set scrolloff=5
