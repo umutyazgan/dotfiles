@@ -6,6 +6,7 @@ set smartindent
 set cindent
 set shiftwidth=4
 set encoding=utf-8
+set incsearch
 
 noremap ş l
 noremap l k
