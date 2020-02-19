@@ -2,6 +2,7 @@ syntax enable
 set nocompatible                " Enables us Vim specific features
 filetype off                    " Reset filetype detection first ...
 filetype plugin indent on       " ... and enable filetype detection
+set number                      " Show line numbers
 set ttyfast                     " Indicate fast terminal conn for faster redrawset number
 set ttyscroll=3                 " Speedup scrolling
 set laststatus=2                " Show status line always
@@ -26,6 +27,7 @@ set completeopt=menu,menuone    " Show popup menu, even if there is one entry
 set pumheight=10                " Completion window max size
 set nocursorcolumn              " Do not highlight column (speeds up highlighting)
 set lazyredraw                  " Wait to redraw
+set nofixendofline              " Do not auto modify last line
 
 " Enable to copy to clipboard for operations like yank, delete, change and put
 " http://stackoverflow.com/questions/20186975/vim-mac-how-to-copy-to-clipboard-without-pbcopy
@@ -101,6 +103,9 @@ Plugin 'auto-pairs-gentle'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'fatih/vim-go'
 Plugin 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+Plugin 'tarekbecker/vim-yaml-formatter'
+Plugin 'yegappan/grep'
+Plugin 'airblade/vim-gitgutter'
 
 call vundle#end()            " required
 "filetype plugin indent on    " required
