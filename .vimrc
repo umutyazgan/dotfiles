@@ -58,20 +58,22 @@ set shiftwidth=4
 set encoding=utf-8
 "set incsearch
 
-noremap ş l
-noremap l k
-noremap k j
-noremap j h
-
-noremap Ş L
-noremap L K
-noremap K J
-noremap J H
-
-noremap <C-W>ş <C-W>l
-noremap <C-W>l <C-W>k
-noremap <C-W>k <C-W>j
-noremap <C-W>j <C-W>h
+"shift navigation keys one key right
+"(this does not worth the trouble)
+"noremap ş l
+"noremap l k
+"noremap k j
+"noremap j h
+"
+"noremap Ş L
+"noremap L K
+"noremap K J
+"noremap J H
+"
+"noremap <C-W>ş <C-W>l
+"noremap <C-W>l <C-W>k
+"noremap <C-W>k <C-W>j
+"noremap <C-W>j <C-W>h
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -163,11 +165,14 @@ let &t_SR = "\<Esc>[4 q"
 let &t_EI = "\<Esc>[2 q"
 
 set mouse=a
-let g:NERDTreeMouseMode=3
 map <MiddleMouse> <Nop>
 imap <MiddleMouse> <Nop>
 
 set scrolloff=5
+
+" NERDTree settings
+let g:NERDTreeMouseMode=1
+let NERDTreeShowHidden=1
 
 " -------------------------------------------------------------------------------------------------
 " coc.nvim default settings
